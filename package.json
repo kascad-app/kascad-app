@@ -1,21 +1,21 @@
 {
-	"name": "@kascad/root",
-	"private": true,
-	"scripts": {
-		"build": "turbo build",
-		"dev": "turbo dev",
-		"lint": "turbo lint",
-		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
-		"version": "changeset version",
-		"release": "changeset publish"
-	},
-	"devDependencies": {
-		"@changesets/cli": "^2.27.1",
-		"@kascad/ts-config": "workspace:*",
-		"prettier": "^3.2.5",
-		"turbo": "latest"
-	},
-	"engines": {
-		"node": ">=18"
-	}
+  "name": "@kascad-app/root",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "version": "changeset version",
+    "release": "changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "@kascad/ts-config": "workspace:*",
+    "prettier": "^3.2.5",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=18"
+  }
 }

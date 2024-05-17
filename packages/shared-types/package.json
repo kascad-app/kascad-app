@@ -1,5 +1,5 @@
 {
-  "name": "@kascad/shared-types",
+  "name": "@kascad-app/shared-types",
   "version": "1.0.0",
   "description": "shared type for kascad project",
   "main": "src/index.ts",
