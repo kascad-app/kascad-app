@@ -5,15 +5,16 @@
 		"build": "turbo build",
 		"dev": "turbo dev",
 		"lint": "turbo lint",
-		"format": "prettier --write \"**/*.{ts,tsx,md}\""
+		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
+		"version": "changeset version",
+		"relase": "changeset release"
 	},
 	"devDependencies": {
-		"@kascad/eslint-config": "workspace:*",
+		"@changesets/cli": "^2.27.1",
 		"@kascad/ts-config": "workspace:*",
 		"prettier": "^3.2.5",
 		"turbo": "latest"
 	},
-	"packageManager": "pnpm@8.9.0",
 	"engines": {
 		"node": ">=18"
 	}
