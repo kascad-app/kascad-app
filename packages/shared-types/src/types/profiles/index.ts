@@ -6,12 +6,12 @@ export interface Profile extends Base {
   description?: string;
   avatarUrl?: string;
   role: ProfileRole;
-  status: profileStatus;
+  status: ProfileStatus;
   verified: boolean;
   isAvailable: boolean;
 }
 
-type profileStatus = {
+export type ProfileStatus = {
   status: AccountStatus;
   reason?: string;
   since?: Date;

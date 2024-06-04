@@ -1,5 +1,6 @@
 export * from "./profiles";
 export * from "./riders";
+export * from "./sponsors";
 
 export type Base = {
   _id: string;
