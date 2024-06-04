@@ -31,3 +31,8 @@ export enum GenderIdentity {
   FEMALE = "female",
   OTHER = "other",
 }
+
+export type Sport = {
+  name: string;
+  description: string;
+};

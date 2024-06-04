@@ -1,4 +1,4 @@
-import { GenderIdentity, Language, Profile, SocialNetwork } from "..";
+import { GenderIdentity, Language, Profile, SocialNetwork, Sport } from "..";
 
 export interface Rider extends Profile {
   identifier: RiderIdentifier;
@@ -23,7 +23,7 @@ export type RiderIdentity = {
 };
 
 export type RiderPreferences = {
-  sports: string[]; // TODO sport type
+  sports: Sport[];
   languages: Language;
   networks: SocialNetwork[];
 };
