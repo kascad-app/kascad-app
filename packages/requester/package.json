@@ -4,7 +4,7 @@
   "main": "dist/kascad-requester.cjs.js",
   "module": "dist/kascad-requester.esm.js",
   "peerDependencies": {
-    "@kascad/shared-types": "workspace:*"
+    "@kascad-app/shared-types": "workspace:*"
   },
   "devDependencies": {
     "@kascad-app/shared-types": "workspace:*",
