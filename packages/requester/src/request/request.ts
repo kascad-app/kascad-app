@@ -1,29 +1,44 @@
-import { APIError, APIResponse } from "@kascad/shared-types";
-import axios, { type AxiosRequestConfig } from "axios";
+import { APIResponse, APIResponsePromise } from "@kascad-app/shared-types";
 
-type ApiRequestConfig = Exclude<AxiosRequestConfig, "method">;
+type ApiRequestConfig = RequestInit & { url: string };
 
-const instance = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_PATH,
-  headers: {
-    "Content-Type": "application/json",
-    Accept: "application/json",
-  },
-  timeout: 6000,
-  transformRequest: [(data) => JSON.stringify(data)],
-});
+const baseUrl = process.env.NEXT_PUBLIC_API_PATH;
 
 const request = async <TData>(
-  url: string,
-  options?: ApiRequestConfig
-): Promise<APIResponse<TData>> => {
-  const response = instance<APIResponse<TData>>(url, { ...options })
-    .then((response) => response.data)
-    .catch((error: APIError) => {
-      throw error;
-    });
+  config: ApiRequestConfig
+): APIResponsePromise<TData> => {
+  const { url, ...options } = config;
+  const fullUrl = `${baseUrl}${url}`;
 
-  return response;
+  try {
+    const response = await fetch(fullUrl, {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        ...options.headers,
+      },
+      ...options,
+    });
+    const data: APIResponse<TData> = await response.json();
+
+    if (data && data.success === false) {
+      return data;
+    }
+    return data;
+  } catch (error) {
+    if (error instanceof Error) {
+      return {
+        success: false,
+        message: error.message,
+        statusCode: 500,
+      };
+    }
+    return {
+      success: false,
+      message: "Unexpected error occurred",
+      statusCode: 500,
+    };
+  }
 };
 
 export type { ApiRequestConfig };

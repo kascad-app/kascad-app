@@ -1,72 +1,38 @@
-import request, { type ApiRequestConfig } from "./request";
+import { APIResponsePromise } from "@kascad-app/shared-types";
+import request, { ApiRequestConfig } from "./request";
 
-import type { APIResponse } from "@kascad/shared-types";
-
-const createAuthHeaders = (jwtToken: string) => ({
-  Authorization: `${
-    process.env.NEXT_PUBLIC_AUTH_PREFIX || "Bearer"
-  } ${jwtToken}`,
-});
-
-type BaseRequest = <TData>(
+type HttpMethod = <TData>(
   url: string,
   options?: ApiRequestConfig
-) => Promise<APIResponse<TData>>;
+) => APIResponsePromise<TData>;
 
 type RequestResponse = {
-  get: BaseRequest;
-  post: BaseRequest;
-  put: BaseRequest;
-  delete: BaseRequest;
+  get: HttpMethod;
+  post: HttpMethod;
+  put: HttpMethod;
+  delete: HttpMethod;
 };
 
 const requester = (auth = true): RequestResponse => {
-  let baseOptions: ApiRequestConfig = {};
+  let baseOptions: Partial<ApiRequestConfig> = {};
 
-  // - If the app is under React Native, then we don't have access to cookies so we need to pass the JWT token in the Authorization header.
   if (auth) {
-    createAuthHeaders; // - Waiting usage
-
-    baseOptions = {
-      ...baseOptions,
-      withCredentials: true,
-    };
+    baseOptions.credentials = "include"; // Include credentials only if auth is true
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const get: BaseRequest = async <TData = any>(
-    url: string,
-    options?: ApiRequestConfig
-  ): Promise<APIResponse<TData>> =>
-    request<TData>(url, { ...baseOptions, ...options, method: "GET" });
+  const get: HttpMethod = <TData>(url: string, options?: ApiRequestConfig) =>
+    request<TData>({ url, method: "GET", ...options });
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const post: BaseRequest = async <TData = any>(
-    url: string,
-    options?: ApiRequestConfig
-  ): Promise<APIResponse<TData>> =>
-    request<TData>(url, { ...baseOptions, ...options, method: "POST" });
+  const post: HttpMethod = <TData>(url: string, options?: ApiRequestConfig) =>
+    request<TData>({ url, method: "POST", ...options });
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const put: BaseRequest = async <TData = any>(
-    url: string,
-    options?: ApiRequestConfig
-  ): Promise<APIResponse<TData>> =>
-    request<TData>(url, { ...baseOptions, ...options, method: "PUT" });
+  const put: HttpMethod = <TData>(url: string, options?: ApiRequestConfig) =>
+    request<TData>({ url, method: "PUT", ...options });
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const del: BaseRequest = async <TData = any>(
-    url: string,
-    options?: ApiRequestConfig
-  ): Promise<APIResponse<TData>> =>
-    request<TData>(url, { ...baseOptions, ...options, method: "DELETE" });
+  const del: HttpMethod = <TData>(url: string, options?: ApiRequestConfig) =>
+    request<TData>({ url, method: "DELETE", ...options });
 
-  return {
-    get,
-    post,
-    put,
-    delete: del,
-  };
+  return { get, post, put, delete: del };
 };
 
 export { requester };
