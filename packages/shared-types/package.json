@@ -14,5 +14,8 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "repository": "https://github.com/kascad-app/kascad/tree/main/packages/shared-types"
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "repository": "https://github.com/kascad-app/kascad-app/tree/main/packages/shared-types"
 }
