@@ -2,8 +2,14 @@
   "name": "@kascad-app/shared-types",
   "version": "1.1.2",
   "description": "shared type for kascad project",
-  "main": "src/index.ts",
+  "main": "dist/kascad-app-shared-types.cjs.js",
+  "module": "dist/kascad-app-shared-types.esm.js",
   "keywords": [],
+  "preconstruct": {
+    "entrypoints": [
+      "index.ts"
+    ]
+  },
   "author": "",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
