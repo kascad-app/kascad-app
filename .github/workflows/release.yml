@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   release:
-    if: github.repository == 'kascad-app/kascad'
+    if: github.repository == 'kascad-app/kascad-app'
 
     runs-on: ubuntu-latest
 
