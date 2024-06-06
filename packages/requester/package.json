@@ -1,6 +1,6 @@
 {
   "name": "@kascad-app/requester",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "dist/kascad-app-requester.cjs.js",
   "module": "dist/kascad-app-requester.esm.js",
   "peerDependencies": {
