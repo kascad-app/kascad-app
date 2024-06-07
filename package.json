@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
-    "@kascad/ts-config": "workspace:*",
+    "@kascad-app/ts-config": "workspace:*",
     "prettier": "^3.2.5",
     "turbo": "latest"
   },
