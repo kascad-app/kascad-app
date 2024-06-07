@@ -1,6 +1,9 @@
 {
   "name": "@kascad-app/root",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "build": "turbo build",
     "build:packages": "turbo run p:build",
@@ -10,6 +13,7 @@
     "p:dev": "preconstruct dev",
     "p:build": "preconstruct build",
     "p:validate": "preconstruct validate",
+    "p:fix": "preconstruct fix",
     "postinstall": "pnpm p:dev",
     "prepare": "husky install && pnpm p:validate && pnpm build:packages",
     "lint": "turbo lint",
@@ -21,8 +25,15 @@
     "@changesets/cli": "^2.27.1",
     "@kascad-app/ts-config": "workspace:*",
     "@preconstruct/cli": "^2.8.4",
+    "husky": "^9.0.11",
     "prettier": "^3.2.5",
     "turbo": "latest"
+  },
+  "preconstruct": {
+    "packages": [
+      "packages/shared-types",
+      "packages/requester"
+    ]
   },
   "engines": {
     "node": ">=18"

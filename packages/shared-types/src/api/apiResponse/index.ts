@@ -7,10 +7,10 @@ import StatusCode from "../statusCode";
  * For error situations, the response matches the APIError type structure, providing detailed error information.
  */
 type APIResponse<TData extends unknown = undefined> =
-	| (TData extends undefined
-			? { success: true; statusCode?: StatusCode }
-			: { success: true; data: TData; statusCode?: StatusCode })
-	| APIError;
+  | (TData extends undefined
+      ? { success: true; statusCode?: StatusCode }
+      : { success: true; data: TData; statusCode?: StatusCode })
+  | APIError;
 
 /**
  * Describes the structure of an error response from the API. This includes a
@@ -19,12 +19,12 @@ type APIResponse<TData extends unknown = undefined> =
  * and an optional object detailing specific errors (useful for form validation scenarios).
  */
 type APIError = {
-	success: false;
-	message: string;
-	statusCode?: StatusCode;
-	errors?: {
-		[key: string]: string;
-	};
+  success: false;
+  message: string;
+  statusCode?: StatusCode;
+  errors?: {
+    [key: string]: string;
+  };
 };
 
 /**
@@ -34,7 +34,7 @@ type APIError = {
  * both successful and error responses.
  */
 type APIResponsePromise<TData extends unknown = undefined> = Promise<
-	APIResponse<TData>
+  APIResponse<TData>
 >;
 
 export type { APIError, APIResponse, APIResponsePromise };
