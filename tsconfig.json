@@ -1,3 +1,3 @@
 {
-  "extends": "@kascad-app/ts-config/base.json"
+  "extends": "@kascad/ts-config/base.json"
 }
