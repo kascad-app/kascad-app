@@ -1,9 +1,9 @@
-import { ProfileRole } from "../profiles";
+import { ProfileType } from "../profiles";
 
 export type registerSponsorDto = {
   email: string;
   password: string;
-  type: ProfileRole;
+  type: ProfileType.SPONSOR;
   companyName: string;
 };
 

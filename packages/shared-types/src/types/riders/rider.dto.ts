@@ -1,4 +1,4 @@
-import { ProfileRole } from "../profiles";
+import { ProfileType } from "../profiles";
 
 export type registerRiderDto = {
   email: string;
@@ -6,7 +6,7 @@ export type registerRiderDto = {
   birthDate: Date;
   firstName: string;
   lastName: string;
-  type: ProfileRole;
+  type: ProfileType.RIDER;
 };
 
 export type loginRiderDto = {
