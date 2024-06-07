@@ -1,15 +1,13 @@
 import { ProfileRole } from "../profiles";
 
-export type registerRiderDto = {
+export type registerSponsorDto = {
   email: string;
   password: string;
-  birthDate: Date;
-  firstName: string;
-  lastName: string;
   type: ProfileRole;
+  companyName: string;
 };
 
-export type loginRiderDto = {
+export type loginSponsorDto = {
   email: string;
   password: string;
 };
