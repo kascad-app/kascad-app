@@ -3,7 +3,15 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
+    "build:packages": "turbo run p:build",
     "dev": "turbo dev",
+    "dev:packages": "turbo run p:watch",
+    "p:watch": "preconstruct watch",
+    "p:dev": "preconstruct dev",
+    "p:build": "preconstruct build",
+    "p:validate": "preconstruct validate",
+    "postinstall": "pnpm p:dev",
+    "prepare": "husky install && pnpm p:validate && pnpm build:packages",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "version": "changeset version",
@@ -12,6 +20,7 @@
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
     "@kascad-app/ts-config": "workspace:*",
+    "@preconstruct/cli": "^2.8.4",
     "prettier": "^3.2.5",
     "turbo": "latest"
   },
