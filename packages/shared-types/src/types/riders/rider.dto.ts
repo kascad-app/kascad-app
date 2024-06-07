@@ -12,4 +12,5 @@ export type registerRiderDto = {
 export type loginRiderDto = {
   email: string;
   password: string;
+  type: ProfileType.RIDER;
 };
