@@ -1,3 +1,7 @@
 {
-  "extends": "@kascad-app/ts-config/base.json"
+  "extends": "@kascad-app/ts-config/base.json",
+
+  "compilerOptions": {
+    "types": ["node"]
+  }
 }

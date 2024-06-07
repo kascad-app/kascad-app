@@ -2,7 +2,7 @@ import { APIResponse, APIResponsePromise } from "@kascad-app/shared-types";
 
 type ApiRequestConfig = RequestInit & { url: string };
 
-const baseUrl = process.env.NEXT_PUBLIC_API_PATH;
+const baseUrl = process.env.NEXT_PUBLIC_API_PATH || "";
 
 const request = async <TData>(
   config: ApiRequestConfig
