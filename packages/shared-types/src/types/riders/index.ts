@@ -17,7 +17,7 @@ export type RiderIdentifier = {
 export type RiderIdentity = {
   firstName: string;
   lastName: string;
-  fullName: string;
+  fullName?: string;
   gender: GenderIdentity;
   birthDate: Date;
 };
