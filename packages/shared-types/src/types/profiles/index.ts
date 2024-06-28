@@ -2,7 +2,7 @@ import { Base } from "..";
 
 export interface Profile extends Base {
   type: ProfileType;
-  displayName: string;
+  displayName?: string;
   description?: string;
   avatarUrl?: string;
   role: ProfileRole;

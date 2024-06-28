@@ -7,6 +7,7 @@ export type registerRiderDto = {
   firstName: string;
   lastName: string;
   type: ProfileType.RIDER;
+  gender: string;
 };
 
 export type loginRiderDto = {
