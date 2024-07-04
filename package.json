@@ -39,6 +39,7 @@
       "packages/shared-types"
     ]
   },
+  "packageManager": "pnpm@9.4.0",
   "engines": {
     "node": ">=18"
   }
