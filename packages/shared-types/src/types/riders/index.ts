@@ -1,6 +1,6 @@
-import { GenderIdentity, Language, Profile, SocialNetwork, Sport } from "..";
+import { Profile, GenderIdentity, Language, Sport, SocialNetwork } from "..";
 
-export * from "./rider.dto";
+import { WeatherCondition } from "../../generics";
 
 export interface Rider extends Profile {
   identifier: RiderIdentifier;
@@ -8,6 +8,12 @@ export interface Rider extends Profile {
   identity: RiderIdentity;
   preferences: RiderPreferences;
   partnerships: string[];
+  performances: Performance[];
+  performanceVideos: TricksVideo[];
+  trainingFrequency: TrainingFrequency;
+  currentSponsors: string[];
+  socialMediaEngagement: SocialMediaEngagement;
+  nonCompetitionAwards: NonCompetitionAward[];
 }
 
 export type RiderIdentifier = {
@@ -22,10 +28,56 @@ export type RiderIdentity = {
   fullName?: string;
   gender: GenderIdentity;
   birthDate: Date;
+  country: string;
+  languageSpoken: string[];
+  city: string;
+  practiceLocation: string;
 };
 
 export type RiderPreferences = {
   sports: Sport[];
   languages: Language;
   networks: SocialNetwork[];
+};
+
+export type Performance = {
+  startDate: Date;
+  endDate: Date;
+  eventName: string;
+  category: string;
+  ranking?: number;
+  location: {
+    country: string;
+    city: string;
+  };
+  weather: WeatherCondition;
+  notes?: string;
+};
+
+export type TricksVideo = {
+  url: string;
+  title: string;
+  description?: string;
+  uploadDate: Date;
+  relatedPerformance?: Performance;
+};
+
+export type TrainingFrequency = {
+  sessionsPerWeek: number;
+  hoursPerSession: number;
+};
+
+export type SocialMediaEngagement = {
+  [key in SocialNetwork]: {
+    followers: number;
+    engagementRate: number;
+    popularVideos?: string[];
+  };
+};
+
+export type NonCompetitionAward = {
+  date: Date;
+  title: string;
+  description: string;
+  source: string;
 };

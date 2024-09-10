@@ -6,11 +6,11 @@
  * for constructing the range. The resulting type is a union of number literals from 0 up to but not including N.
  */
 type Enumerate<
-	N extends number,
-	Acc extends number[] = [],
+  N extends number,
+  Acc extends number[] = [],
 > = Acc["length"] extends N
-	? Acc[number]
-	: Enumerate<N, [...Acc, Acc["length"]]>;
+  ? Acc[number]
+  : Enumerate<N, [...Acc, Acc["length"]]>;
 
 /**
  * Generates a union type of integer numbers between two bounds, 'F' (from) and 'T' (to).
@@ -19,8 +19,41 @@ type Enumerate<
  * This type is useful for defining types that can only take certain integer values within a specified range.
  */
 type IntRange<F extends number, T extends number> = Exclude<
-	Enumerate<T>,
-	Enumerate<F>
+  Enumerate<T>,
+  Enumerate<F>
 >;
 
 export type { Enumerate, IntRange };
+
+export enum WeatherCondition {
+  SUNNY = "sunny",
+  PARTLY_CLOUDY = "partly_cloudy",
+  CLOUDY = "cloudy",
+  OVERCAST = "overcast",
+  LIGHT_RAIN = "light_rain",
+  MODERATE_RAIN = "moderate_rain",
+  HEAVY_RAIN = "heavy_rain",
+  THUNDERSTORM = "thunderstorm",
+  SNOW = "snow",
+  BLIZZARD = "blizzard",
+  SLEET = "sleet",
+  HAIL = "hail",
+  FOG = "fog",
+  MIST = "mist",
+  WINDY = "windy",
+  STRONG_WIND = "strong_wind",
+  GALE = "gale",
+  HURRICANE = "hurricane",
+  TORNADO = "tornado",
+  HOT = "hot",
+  COLD = "cold",
+  FREEZING = "freezing",
+  DRY = "dry",
+  HUMID = "humid",
+  DUSTY = "dusty",
+  SANDSTORM = "sandstorm",
+  CLEAR_NIGHT = "clear_night",
+  HEATWAVE = "heatwave",
+  DROUGHT = "drought",
+  TROPICAL_STORM = "tropical_storm",
+}
