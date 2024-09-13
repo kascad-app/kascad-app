@@ -1,0 +1,11 @@
+.btn__default {
+	background-color: var(--color-blue-brand);
+	color: #fff;
+	border: 1px solid var(--color-blue-brand);
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 500;
+	transition: all 0.3s;
+}
