@@ -1,5 +1,5 @@
 {
-  "name": "ui-kit",
+  "name": "@kascad-app/ui-kit",
   "version": "0.0.1",
   "description": "Kascad wonderful ui kit",
   "main": "src/index.ts",
