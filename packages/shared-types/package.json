@@ -5,7 +5,8 @@
   "main": "dist/kascad-app-shared-types.cjs.js",
   "module": "dist/kascad-app-shared-types.esm.js",
   "devDependencies": {
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "@kascad-app/prettier-config": "workspace:*"
   },
   "preconstruct": {
     "entrypoints": [
