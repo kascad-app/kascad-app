@@ -71,7 +71,6 @@ export type SocialMediaEngagement = {
   [key in SocialNetwork]: {
     followers: number;
     engagementRate: number;
-    popularVideos?: string[];
   };
 };
 
