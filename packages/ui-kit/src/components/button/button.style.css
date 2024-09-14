@@ -1,3 +1,8 @@
+@font-face {
+	font-family: Figtree;
+	src: url(../../styles/fonts/Figtree-VariableFont_wght.ttf);
+}
+
 .btn__default {
 	cursor: pointer;
 	display: inline-flex;
@@ -6,7 +11,11 @@
 	gap: var(--spacing-small);
 	border-radius: var(--spacing-small);
 	color: var(--color-white-200, #ededed);
+	font-family: Figtree;
 	font-size: 14px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
 }
 
 /* Variant styles */
