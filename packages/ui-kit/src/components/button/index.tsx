@@ -15,12 +15,12 @@ export const Button: React.FC<ButtonProps> = ({
 
 	return (
 		<button
-			{...props}
 			className={classNames}
 			data-state={state}
 			data-variant={variant}
 			data-size={size}
-			disabled={state === "disabled"}>
+			disabled={state === "disabled"}
+			{...props}>
 			{children}
 		</button>
 	);

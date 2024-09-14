@@ -12,8 +12,8 @@ export type ButtonState = "default" | "hover" | "disabled";
 export type ButtonVariant =
 	| "primary"
 	| "secondary"
-	| "dark"
 	| "tertiary"
+	| "dark"
 	| "danger"
 	| "warning";
 

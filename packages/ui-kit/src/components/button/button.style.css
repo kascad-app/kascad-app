@@ -1,11 +1,101 @@
 .btn__default {
-	background-color: var(--color-blue-brand);
-	color: #fff;
-	border: 1px solid var(--color-blue-brand);
-	padding: 10px 20px;
-	border-radius: 5px;
 	cursor: pointer;
-	font-size: 16px;
-	font-weight: 500;
-	transition: all 0.3s;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: var(--spacing-small);
+	border-radius: var(--spacing-small);
+	color: var(--color-white-200, #ededed);
+	font-size: 14px;
+}
+
+/* Variant styles */
+.btn__default[data-variant="primary"] {
+	background-color: var(--color-blue-brand);
+	border: 1px solid var(--color-blue-brand);
+	&:hover {
+		background-color: var(--color-blue-hover);
+		border: 1px solid var(--color-blue-brand);
+	}
+	&[data-state="disabled"] {
+		background-color: var(--color-blue-brand);
+		opacity: 0.3;
+		border: none;
+		cursor: not-allowed;
+	}
+}
+
+.btn__default[data-variant="secondary"] {
+	border: 1px solid var(--color-blue-brand);
+	color: var(--color-blue-brand);
+	&:hover {
+		border: 1px solid var(--color-blue-400);
+		color: var(--color-blue-400);
+	}
+	&[data-state="disabled"] {
+		color: var(--color-blue-400);
+		border: 1px solid var(--color-blue-400);
+		opacity: 0.3;
+		cursor: not-allowed;
+	}
+}
+
+.btn__default[data-variant="tertiary"] {
+	background-color: var(--color-blue-300);
+	border: 1px solid var(--color-blue-300);
+	&:hover {
+		background-color: var(--color-blue-400);
+		border: 1px solid var(--color-blue-400);
+	}
+	&[data-state="disabled"] {
+		background-color: var(--color-blue-300);
+		opacity: 0.3;
+		border: none;
+		cursor: not-allowed;
+	}
+}
+
+.btn__default[data-variant="dark"] {
+	background-color: var(--color-dark-base);
+	border: 1px solid var(--color-dark-base);
+	&:hover {
+		background-color: var(--color-dark-800);
+		border: 1px solid var(--color-dark-800);
+	}
+	&[data-state="disabled"] {
+		background-color: var(--color-dark-800);
+		opacity: 0.3;
+		border: none;
+		cursor: not-allowed;
+	}
+}
+
+.btn__default[data-variant="warning"] {
+	border: 1px solid var(--color-orange-300);
+	background-color: var(--color-orange-300);
+	&:hover {
+		background-color: var(--color-orange-400);
+		border: 1px solid var(--color-orange-400);
+	}
+	&[data-state="disabled"] {
+		background-color: var(--color-orange-300);
+		opacity: 0.3;
+		border: none;
+		cursor: not-allowed;
+	}
+}
+
+.btn__default[data-variant="danger"] {
+	border: 1px solid var(--color-red-400);
+	background-color: var(--color-red-400);
+	&:hover {
+		background-color: var(--color-red-500);
+		border: 1px solid var(--color-red-400);
+	}
+	&[data-state="disabled"] {
+		background-color: var(--color-red-400);
+		opacity: 0.3;
+		border: none;
+		cursor: not-allowed;
+	}
 }
