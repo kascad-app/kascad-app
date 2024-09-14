@@ -99,3 +99,14 @@
 		cursor: not-allowed;
 	}
 }
+
+.btn__default[data-size="default"] {
+	padding: var(--spacing-small) var(--spacing-medium);
+	width: 115px;
+	height: 33px;
+}
+.btn__default[data-size="large"] {
+	padding: var(--spacing-small) var(--spacing-xxxlarge);
+	width: 195px;
+	height: 33px;
+}
