@@ -1,0 +1,21 @@
+{
+  "name": "@kascad-app/prettier-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "base.json",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "preconstruct": {
+    "entrypoints": [
+      "index.js"
+    ]
+  },
+  "repository": "https://github.com/kascad-app/kascad-app/tree/main/packages/prettier-config",
+  "devDependencies": {
+    "prettier": "^3.3.2"
+  }
+}

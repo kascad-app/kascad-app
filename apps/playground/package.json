@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
     "@kascad-app/ui-kit": "workspace:*",
@@ -20,6 +19,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.2.11"
+    "eslint-config-next": "14.2.11",
+    "@kascad-app/prettier-config": "workspace:*"
   }
 }
