@@ -22,16 +22,17 @@
     "release": "changeset publish"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.7",
-    "@babel/plugin-proposal-decorators": "^7.24.7",
-    "@babel/plugin-transform-runtime": "^7.24.7",
-    "@babel/preset-env": "^7.24.7",
-    "@babel/preset-typescript": "^7.24.7",
-    "@changesets/cli": "^2.27.7",
+    "@babel/core": "^7.26.0",
+    "@babel/plugin-proposal-decorators": "^7.25.9",
+    "@babel/plugin-transform-runtime": "^7.25.9",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-typescript": "^7.26.0",
+    "@changesets/changelog-github": "^0.5.0",
+    "@changesets/cli": "^2.27.9",
     "@kascad-app/ts-config": "workspace:*",
-    "@preconstruct/cli": "^2.8.5",
-    "husky": "^9.0.11",
-    "prettier": "^3.3.2",
+    "@preconstruct/cli": "^2.8.10",
+    "husky": "^9.1.6",
+    "prettier": "^3.3.3",
     "turbo": "latest"
   },
   "preconstruct": {
