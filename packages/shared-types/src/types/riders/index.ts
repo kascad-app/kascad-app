@@ -2,6 +2,8 @@ import { Profile, GenderIdentity, Language, Sport, SocialNetwork } from "..";
 
 import { WeatherCondition } from "../../generics";
 
+export * from "./rider.dto";
+
 export interface Rider extends Profile {
   identifier: RiderIdentifier;
   password: string;
