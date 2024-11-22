@@ -1,41 +1,56 @@
-@font-face {
-	font-family: Figtree;
-	src: url(../../styles/fonts/Figtree-VariableFont_wght.ttf);
-}
-
-.input__default{
+.input__default {
   display: flex;
-  width: 375px;
+  width: 375px; /* Largeur fixe */
   height: var(--spacing-xxxlarge, 48px);
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  padding: 0 var(--spacing-small, 8px);
+  padding: 0 var(--spacing-small, 8px); /* Padding par défaut */
   border: 1px solid var(--color-dark-200);
   border-radius: var(--spacing-small, 8px);
+  font-family: Figtree;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  transition: padding 0.2s; /* Pour une transition fluide lors du changement de padding */
+
   &:focus {
-    outline: none;
     border: 1px solid var(--color-dark-base);
     box-shadow: 0 0 0 2px var(--color-dark-200);
   }
 }
 
-.inputs-container{
-  margin-bottom: 14px;
+.input__default[data-error="true"] {
+  background-color: rgba(239, 95, 94, 0.1);  /* Fond blanc avec 20% d'opacité */
+  border: 1px solid var(--color-red-400);  /* Bordure non modifiée */
+
+  &:focus{
+    box-shadow: 0 0 0 2px #FFE4E8;
+  }	
+  &[data-state="disabled"] {
+		background-color: rgba(197, 49, 47, 0.1);
+    border: 1px solid var(--color-red-100)
+	}
 }
- 
-.input__default[data-state="disabled"]{
-  border-radius: var(--spacing-small, 8px);
-  border: 1px solid var(--color-dark-200);
-  background: var(--color-white-200);
+.input__default[data-error="true"]::placeholder {
+  color: var(--color-red-400);
+}
+
+.input__default[data-error="true"][data-state="disabled"]::placeholder {
+  color: var(--color-red-500); 
+}
+
+.input--with-icon-left {
+  padding-left: 40px; /* Espace pour l'icône gauche */
+}
+
+.input--with-icon-right {
+  padding-right: 40px; /* Espace pour l'icône droite */
 }
 
 .input-wrapper {
   position: relative;
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  width: 375px; /* Largeur fixe pour l'uniformité */
 }
-
 
 .input-wrapper .icon-left,
 .input-wrapper .icon-right {
@@ -43,35 +58,47 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  width: 24px; /* Taille de l'icône */
+  height: 24px;
+  pointer-events: none;
 }
 
 .input-wrapper .icon-left {
-  left: 8px;
+  left: 8px; /* Position de l'icône gauche */
 }
 
 .input-wrapper .icon-right {
-  right: 8px;
+  right: 8px; /* Position de l'icône droite */
 }
 
-.input__default {
-  padding-left: 40px;
-}
-
-.input--with-icon-left {
-  padding-left: 40px;
-}
-
-.input--with-icon-right {
-  padding-right: 40px; 
-}
 .input-message {
   font-size: 12px;
-  color: #6c757d; /* Gris neutre */
+  color: #6c757d;
   margin-top: 4px;
   font-family: Figtree;
 }
 
+.input-message-img{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .input-message--error {
-  color: #dc3545; /* Rouge pour les erreurs */
+  color: var(--color-red-400);
+}
+
+
+.inputs-container {
+  margin-bottom: 14px;
+}
+
+.icon-left,
+.icon-right {
+  transition: filter 0.3s, opacity 0.3s;
+}
+
+.icon-disabled {
+  filter: grayscale(100%) brightness(0.8);
+  opacity: 0.5; 
 }
