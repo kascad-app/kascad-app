@@ -31,6 +31,7 @@ export enum SocialNetwork {
   DISCORD = "discord",
   TWITCH = "twitch",
   GITHUB = "github",
+  STRAVA = "strava",
 }
 
 export enum GenderIdentity {
