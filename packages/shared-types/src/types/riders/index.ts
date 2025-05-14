@@ -12,9 +12,9 @@ export interface Rider extends Profile {
   partnerships: string[];
   performances: Performance[];
   performanceVideos: TricksVideo[];
+  images: Image[];
   trainingFrequency: TrainingFrequency;
   currentSponsors: string[];
-  // socialMediaEngagement: SocialMediaEngagement;
   nonCompetitionAwards: NonCompetitionAward[];
 }
 
@@ -69,12 +69,11 @@ export type TrainingFrequency = {
   hoursPerSession: number;
 };
 
-// export type SocialMediaEngagement = {
-//   [key in SocialNetwork]: {
-//     followers: number;
-//     engagementRate: number;
-//   };
-// };
+export type Image = {
+  url: string;
+  alt?: string;
+  uploadDate: Date;
+}
 
 export type NonCompetitionAward = {
   date: Date;
