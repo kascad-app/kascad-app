@@ -10,11 +10,10 @@ export interface Rider extends Profile {
   identity: RiderIdentity;
   preferences: RiderPreferences;
   partnerships: string[];
-  performances: Performance[];
-  performanceVideos: TricksVideo[];
-  images: Image[];
+  performanceSummary: PerformanceSummary;
   trainingFrequency: TrainingFrequency;
-  currentSponsors: string[];
+  currentSponsorSummary: CurrentSponsorSummary;
+  images: Image[];
   nonCompetitionAwards: NonCompetitionAward[];
 }
 
@@ -80,4 +79,15 @@ export type NonCompetitionAward = {
   title: string;
   description: string;
   source: string;
+};
+
+export type CurrentSponsorSummary = {
+    totalSponsors: number;
+    currentSponsors: string[];
+}
+
+export type PerformanceSummary = {
+  totalPodiums: number;
+  performances: Performance[];
+  performanceVideos: TricksVideo[];
 };
