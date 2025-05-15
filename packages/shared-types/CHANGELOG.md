@@ -17,3 +17,9 @@
 ### Minor Changes
 
 ([#4]) [`9d7f0b5`](https://github.com/kascad-app/kascad-app/pull/5/commits/9d7f0b58051abdbb8209f8bbd2403a10ace842b5) - remove unused types
+
+## 1.3.3
+
+### Minor Changes
+
+([#5]) [`ba806f6`](https://github.com/kascad-app/kascad-app/pull/5/commits/ba806f67882251f3ba5bf6d14a988c46588ee15f) - revert profile type deletion
