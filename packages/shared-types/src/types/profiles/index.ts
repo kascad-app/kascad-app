@@ -1,7 +1,6 @@
 import { Base } from "..";
 
 export interface Profile extends Base {
-  type: ProfileType;
   displayName?: string;
   description?: string;
   avatarUrl?: string;
@@ -27,9 +26,4 @@ export enum AccountStatus {
 export enum ProfileRole {
   ADMIN = 2,
   USER = 1,
-}
-
-export enum ProfileType {
-  RIDER = "rider",
-  SPONSOR = "sponsor",
 }

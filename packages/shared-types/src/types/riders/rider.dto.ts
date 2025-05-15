@@ -1,4 +1,3 @@
-import { ProfileType } from "../profiles";
 import { GenderIdentity } from "..";
 
 export type registerRiderDto = {
