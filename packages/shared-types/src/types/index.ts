@@ -1,6 +1,3 @@
-import { Rider } from "./riders";
-import { Sponsor } from "./sponsors";
-
 export * from "./profiles";
 export * from "./riders";
 export * from "./sponsors";
@@ -10,8 +7,6 @@ export type Base = {
   createdAt: Date;
   updatedAt: Date;
 };
-
-export type UnknowProfile = Rider | Sponsor;
 
 export enum Language {
   FR,

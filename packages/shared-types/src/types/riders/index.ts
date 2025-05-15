@@ -9,7 +9,6 @@ export interface Rider extends Profile {
   password: string;
   identity: RiderIdentity;
   preferences: RiderPreferences;
-  partnerships: string[];
   performanceSummary: PerformanceSummary;
   trainingFrequency: TrainingFrequency;
   currentSponsorSummary: CurrentSponsorSummary;
@@ -72,7 +71,7 @@ export type Image = {
   url: string;
   alt?: string;
   uploadDate: Date;
-}
+};
 
 export type NonCompetitionAward = {
   date: Date;
@@ -82,9 +81,10 @@ export type NonCompetitionAward = {
 };
 
 export type CurrentSponsorSummary = {
-    totalSponsors: number;
-    currentSponsors: string[];
-}
+  totalSponsors: number;
+  wishListSponsors: string[];
+  currentSponsors: string[];
+};
 
 export type PerformanceSummary = {
   totalPodiums: number;

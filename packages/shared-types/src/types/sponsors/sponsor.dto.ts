@@ -1,5 +1,3 @@
-import { ProfileType } from "../profiles";
-
 export type registerSponsorDto = {
   email: string;
   password: string;
