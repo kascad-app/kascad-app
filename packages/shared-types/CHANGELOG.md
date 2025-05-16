@@ -29,3 +29,9 @@
 ### Minor Changes
 
 ([#7]) [`bb6262c`](https://github.com/kascad-app/kascad-app/pull/5/commits/bb6262c41715031708adaa15d29ea810041f5180) - add type article & refactor rider type & undo UnknowProfile deletion
+
+## 1.3.6
+
+### Minor Changes
+
+([#8]) [`2399254`](https://github.com/kascad-app/kascad-app/pull/5/commits/239925495ca584b2b16c2ea14d26704ee986d11a) - fix export article & rider deprecated fields
