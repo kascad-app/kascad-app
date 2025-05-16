@@ -28,4 +28,4 @@
 
 ### Minor Changes
 
-([#7]) [`bb6262c`](https://github.com/kascad-app/kascad-app/pull/5/commits/bb6262c41715031708adaa15d29ea810041f5180) - add type article & refactor rider type
+([#7]) [`bb6262c`](https://github.com/kascad-app/kascad-app/pull/5/commits/bb6262c41715031708adaa15d29ea810041f5180) - add type article & refactor rider type & undo UnknowProfile deletion
