@@ -6,11 +6,7 @@ import StatusCode from "../statusCode";
  * If `TData` is provided, indicating expected data in the response, it contains `success`, `data`, and an optional `statusCode`.
  * For error situations, the response matches the APIError type structure, providing detailed error information.
  */
-type APIResponse<TData extends unknown = undefined> =
-  | (TData extends undefined
-      ? { success: true; statusCode?: StatusCode }
-      : { success: true; data: TData; statusCode?: StatusCode })
-  | APIError;
+type APIResponse<TData extends unknown = undefined> = TData | APIError;
 
 /**
  * Describes the structure of an error response from the API. This includes a
