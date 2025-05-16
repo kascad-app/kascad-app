@@ -12,7 +12,6 @@ export interface Rider extends Profile {
   performanceSummary: PerformanceSummary;
   trainingFrequency: TrainingFrequency;
   sponsorSummary: SponsorSummary;
-  sports: string[];
   images: Image[];
   nonCompetitionAwards: NonCompetitionAward[];
   availibility: Availibility;

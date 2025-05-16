@@ -4,6 +4,7 @@ import { Sponsor } from "./sponsors";
 export * from "./profiles";
 export * from "./riders";
 export * from "./sponsors";
+export * from "./articles";
 
 export type Base = {
   _id: string;
