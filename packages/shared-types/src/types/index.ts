@@ -39,3 +39,10 @@ export type Sport = {
   name: string;
   description: string;
 };
+
+export enum ContractType {
+  UGC = "UGC contract",
+  AMBASSADOR = "Brand ambassador contract",
+  PRODUCT_PLACEMENT = "Sponsored content contract",
+  AFFILIATION = "Affiliate marketing contract"
+}

@@ -1,4 +1,4 @@
-import { Profile, GenderIdentity, Language, Sport, SocialNetwork } from "..";
+import { Profile, GenderIdentity, Language, Sport, SocialNetwork, ContractType } from "..";
 
 import { WeatherCondition } from "../../generics";
 
@@ -11,9 +11,11 @@ export interface Rider extends Profile {
   preferences: RiderPreferences;
   performanceSummary: PerformanceSummary;
   trainingFrequency: TrainingFrequency;
-  currentSponsorSummary: CurrentSponsorSummary;
+  sponsorSummary: SponsorSummary;
+  sports: string[];
   images: Image[];
   nonCompetitionAwards: NonCompetitionAward[];
+  availibility: Availibility;
 }
 
 export type RiderIdentifier = {
@@ -80,7 +82,7 @@ export type NonCompetitionAward = {
   source: string;
 };
 
-export type CurrentSponsorSummary = {
+export type SponsorSummary = {
   totalSponsors: number;
   wishListSponsors: string[];
   currentSponsors: string[];
@@ -91,3 +93,8 @@ export type PerformanceSummary = {
   performances: Performance[];
   performanceVideos: TricksVideo[];
 };
+
+export type Availibility = {
+  isAvailable: boolean;
+  contractType: ContractType;
+}
