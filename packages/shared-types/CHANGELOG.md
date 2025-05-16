@@ -23,3 +23,9 @@
 ### Minor Changes
 
 ([#5]) [`ba806f6`](https://github.com/kascad-app/kascad-app/pull/5/commits/ba806f67882251f3ba5bf6d14a988c46588ee15f) - revert profile type deletion
+
+## 1.3.5
+
+### Minor Changes
+
+([#7]) [`bb6262c`](https://github.com/kascad-app/kascad-app/pull/5/commits/bb6262c41715031708adaa15d29ea810041f5180) - add type article & refactor rider type
