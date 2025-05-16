@@ -8,7 +8,6 @@ export interface Profile extends Base {
   role: ProfileRole;
   status: ProfileStatus;
   verified: boolean;
-  isAvailable: boolean;
 }
 
 export type ProfileStatus = {
