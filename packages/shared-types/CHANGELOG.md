@@ -40,4 +40,4 @@
 
 ### Minor Changes
 
-([#9]) [`2399254`](https://github.com/kascad-app/kascad-app/pull/5/commits/239925495ca584b2b16c2ea14d26704ee986d11a) - add articleDto
+([#9]) [`350b5f3`](https://github.com/kascad-app/kascad-app/pull/5/commits/350b5f366017b0c1bb97ad1d61e6b9958f9bfba5) - add articleDto
