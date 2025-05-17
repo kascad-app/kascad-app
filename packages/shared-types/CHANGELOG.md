@@ -41,3 +41,9 @@
 ### Minor Changes
 
 ([#9]) [`350b5f3`](https://github.com/kascad-app/kascad-app/pull/5/commits/350b5f366017b0c1bb97ad1d61e6b9958f9bfba5) - add articleDto
+
+## 1.3.8
+
+### Minor Changes
+
+([#10]) - fix articleDto
