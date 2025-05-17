@@ -35,3 +35,9 @@
 ### Minor Changes
 
 ([#8]) [`2399254`](https://github.com/kascad-app/kascad-app/pull/5/commits/239925495ca584b2b16c2ea14d26704ee986d11a) - fix export article & rider deprecated fields
+
+## 1.3.7
+
+### Minor Changes
+
+([#9]) [`2399254`](https://github.com/kascad-app/kascad-app/pull/5/commits/239925495ca584b2b16c2ea14d26704ee986d11a) - add articleDto
