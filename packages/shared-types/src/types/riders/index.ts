@@ -1,4 +1,11 @@
-import { Profile, GenderIdentity, Language, Sport, SocialNetwork, ContractType } from "..";
+import {
+  Profile,
+  GenderIdentity,
+  Language,
+  Sport,
+  SocialNetwork,
+  ContractType,
+} from "..";
 
 import { WeatherCondition } from "../../generics";
 
@@ -19,6 +26,7 @@ export interface Rider extends Profile {
 
 export type RiderIdentifier = {
   email: string;
+  slug: string;
   phoneNumber?: string;
   username?: string;
 };
@@ -96,4 +104,4 @@ export type PerformanceSummary = {
 export type Availibility = {
   isAvailable: boolean;
   contractType: ContractType;
-}
+};

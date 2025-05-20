@@ -47,3 +47,9 @@
 ### Minor Changes
 
 ([#10]) - fix articleDto
+
+## 1.3.9
+
+### Minor Changes
+
+([#11]) - Add slug to rider identifer
