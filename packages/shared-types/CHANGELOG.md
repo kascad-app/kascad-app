@@ -53,3 +53,9 @@
 ### Minor Changes
 
 ([#11]) - Add slug to rider identifer
+
+## 1.3.10
+
+### Minor Changes
+
+([#12]) - Add Strava's credentials
