@@ -29,6 +29,21 @@ export type RiderIdentifier = {
   slug: string;
   phoneNumber?: string;
   username?: string;
+  strava: Strava;
+};
+
+export type Strava = {
+  isLinked: boolean;
+  identifier?: StravaIdentifier;
+};
+
+export type StravaIdentifier = {
+  token_type: string;
+  expires_at: number;
+  expires_in: number;
+  refresh_token: string;
+  access_token: string;
+  athlete: string;
 };
 
 export type RiderIdentity = {
