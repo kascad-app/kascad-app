@@ -12,3 +12,7 @@ export type registerContractDto = {
   termsAndConditions?: string;
   perks?: string[];
 };
+
+export type sendMessageDto = {
+  content: string;
+};

@@ -71,3 +71,9 @@
 ### Minor Changes
 
 ([#14]) - Add messages
+
+## 1.3.13
+
+### Minor Changes
+
+([#15]) - Add messages dto
