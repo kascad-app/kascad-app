@@ -13,6 +13,11 @@ export type registerContractDto = {
   perks?: string[];
 };
 
-export type sendMessageDto = {
+export type messagePayloadDto = {
+  content: string;
+};
+
+export type registerMessageDto = {
+  authorName: string;
   content: string;
 };
