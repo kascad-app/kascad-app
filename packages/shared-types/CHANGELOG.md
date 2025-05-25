@@ -59,3 +59,9 @@
 ### Minor Changes
 
 ([#12]) - Add Strava's credentials
+
+## 1.3.11
+
+### Minor Changes
+
+([#13]) - Add ContractOffer type
