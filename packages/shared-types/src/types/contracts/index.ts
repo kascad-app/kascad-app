@@ -16,4 +16,10 @@ export interface ContractOffer {
   riderFullName: string;
   termsAndConditions?: string;
   perks?: string[];
+  messages: Message[];
+}
+
+export interface Message {
+  authorName: string;
+  content: string;
 }
