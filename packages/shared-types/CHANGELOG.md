@@ -65,3 +65,9 @@
 ### Minor Changes
 
 ([#13]) - Add ContractOffer type
+
+## 1.3.12
+
+### Minor Changes
+
+([#14]) - Add messages
