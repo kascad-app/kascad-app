@@ -2,6 +2,7 @@ export * from "./profiles";
 export * from "./riders";
 export * from "./sponsors";
 export * from "./articles";
+export * from "./contracts";
 
 export type Base = {
   _id: string;
