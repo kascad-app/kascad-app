@@ -77,3 +77,9 @@
 ### Minor Changes
 
 ([#15]) - Add messages dto
+
+## 1.3.14
+
+### Minor Changes
+
+([#15]) - Refactor Dto type, using payload instead of register for client side usage
