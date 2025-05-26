@@ -1,4 +1,4 @@
-import { ContractStatus, ContractType, Message } from "..";
+import { ContractStatus, ContractType, Message, ProfileType } from "..";
 
 export type getContractsDto = {
   authorMail: string;
@@ -17,7 +17,7 @@ export type getContractsDto = {
   termsAndConditions?: string;
   perks?: string[];
   status: ContractStatus;
-  messages: Message[];
+  messages: getMessagesDto[];
 };
 
 export type registerContractDto = {
@@ -35,9 +35,8 @@ export type registerContractDto = {
 };
 
 export type getMessagesDto = {
+  authorType: ProfileType;
   authorMail: string;
-  authorAvatar?: string;
-  authorName?: string;
   content: string;
   createdAt: Date;
 };

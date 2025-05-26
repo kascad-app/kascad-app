@@ -1,4 +1,4 @@
-import { ContractType } from "..";
+import { ContractType, ProfileType } from "..";
 
 export * from "./contract.dto";
 
@@ -19,6 +19,7 @@ export interface ContractOffer {
 }
 
 export interface Message {
+  authorType: ProfileType;
   authorMail: string;
   content: string;
 }
