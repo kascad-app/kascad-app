@@ -107,3 +107,9 @@
 ### Minor Changes
 
 ([#22]) - Edit dto messages
+
+## 1.4.1
+
+### Major Changes
+
+New Version
