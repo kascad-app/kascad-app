@@ -1,4 +1,4 @@
-import { ContractType } from "..";
+import { ContractStatus, ContractType } from "..";
 
 export type registerContractDto = {
   authorMail: string;
@@ -10,6 +10,7 @@ export type registerContractDto = {
   endDate?: Date;
   riderMail: string;
   termsAndConditions?: string;
+  status: ContractStatus;
   perks?: string[];
 };
 
@@ -18,6 +19,7 @@ export type messagePayloadDto = {
 };
 
 export type registerMessageDto = {
-  authorName: string;
+  authorMail: string;
+  authorName?: string;
   content: string;
 };

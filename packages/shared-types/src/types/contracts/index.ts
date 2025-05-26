@@ -16,10 +16,21 @@ export interface ContractOffer {
   riderFullName: string;
   termsAndConditions?: string;
   perks?: string[];
+  status: ContractStatus;
   messages: Message[];
 }
 
 export interface Message {
-  authorName: string;
+  authorMail: string;
+  authorName?: string;
   content: string;
+}
+
+export enum ContractStatus {
+  PENDING = "PENDING",
+  ACCEPTED = "ACCEPTED",
+  REJECTED = "REJECTED",
+  CANCELLED = "CANCELLED",
+  EXPIRED = "EXPIRED",
+  COMPLETED = "COMPLETED",
 }

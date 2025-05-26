@@ -83,3 +83,9 @@
 ### Minor Changes
 
 ([#15]) - Refactor Dto type, using payload instead of register for client side usage
+
+## 1.3.15
+
+### Minor Changes
+
+([#16]) - Update dto contract and message type
