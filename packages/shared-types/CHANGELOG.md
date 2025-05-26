@@ -95,3 +95,9 @@
 ### Minor Changes
 
 ([#16]) - Update dto contract and message type
+
+## 1.3.17
+
+### Minor Changes
+
+([#16]) - Remove rider & sponsors information from contract type
