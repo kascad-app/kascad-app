@@ -89,3 +89,9 @@
 ### Minor Changes
 
 ([#16]) - Update dto contract and message type
+
+## 1.3.16
+
+### Minor Changes
+
+([#16]) - Update dto contract and message type
