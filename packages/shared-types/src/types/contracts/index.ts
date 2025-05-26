@@ -4,7 +4,6 @@ export * from "./contract.dto";
 
 export interface ContractOffer {
   authorMail: string;
-  authorName: string;
   isNew: boolean;
   type: ContractType;
   title: string;
@@ -13,7 +12,6 @@ export interface ContractOffer {
   startDate: Date;
   endDate?: Date;
   riderMail: string;
-  riderFullName: string;
   termsAndConditions?: string;
   perks?: string[];
   status: ContractStatus;
@@ -22,7 +20,6 @@ export interface ContractOffer {
 
 export interface Message {
   authorMail: string;
-  authorName?: string;
   content: string;
 }
 

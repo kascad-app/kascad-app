@@ -36,7 +36,7 @@ export type registerContractDto = {
 
 export type getMessagesDto = {
   authorMail: string;
-  authroAvatar?: string;
+  authorAvatar?: string;
   authorName?: string;
   content: string;
   createdAt: Date;
