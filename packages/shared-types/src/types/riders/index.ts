@@ -22,7 +22,18 @@ export interface Rider extends Profile {
   images: Image[];
   nonCompetitionAwards: NonCompetitionAward[];
   availibility: Availibility;
+  views: View;
 }
+
+export type View = {
+  lastMonthViews: number;
+  viewEntries: ViewEntry[];
+};
+
+export type ViewEntry = {
+  idUser: string;
+  timestamp: Date;
+};
 
 export type RiderIdentifier = {
   email: string;

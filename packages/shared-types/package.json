@@ -1,6 +1,6 @@
 {
   "name": "@kascad-app/shared-types",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Shared-types for kascad projects",
   "main": "dist/kascad-app-shared-types.cjs.js",
   "module": "dist/kascad-app-shared-types.esm.js",
