@@ -22,8 +22,17 @@ export interface Rider extends Profile {
   images: Image[];
   nonCompetitionAwards: NonCompetitionAward[];
   availibility: Availibility;
-  views: View;
 }
+
+export interface RiderMe extends Rider {
+  views: View;
+  tempViewsStats: TempViewsStats;
+}
+
+export type TempViewsStats = {
+  monthlyViews: number;
+  weeklyViews: number;
+};
 
 export type View = {
   lastMonthViews: number;

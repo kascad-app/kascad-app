@@ -119,3 +119,9 @@ New Version
 ### Minor Changes
 
 ([#23]) - Edit contract dto
+
+## 1.4.3
+
+### Minor Changes
+
+([#23]) - Add new interface to me return
