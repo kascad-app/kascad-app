@@ -1,6 +1,7 @@
 import { ContractStatus, ContractType, Message, ProfileType } from "..";
 
 export type getContractsDto = {
+  id: string;
   authorMail: string;
   authorAvatar: string;
   authorName: string;

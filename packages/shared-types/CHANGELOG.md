@@ -113,3 +113,9 @@
 ### Major Changes
 
 New Version
+
+## 1.4.2
+
+### Minor Changes
+
+([#23]) - Edit contract dto
