@@ -76,6 +76,7 @@ export type RiderIdentity = {
   languageSpoken: string[];
   city: string;
   practiceLocation: string;
+  bio?: string;
 };
 
 export type RiderPreferences = {

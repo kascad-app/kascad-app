@@ -125,3 +125,9 @@ New Version
 ### Minor Changes
 
 ([#23]) - Add new interface to me return
+
+## 1.4.4
+
+### Minor Changes
+
+([#23]) - EDIT - Rider Type
