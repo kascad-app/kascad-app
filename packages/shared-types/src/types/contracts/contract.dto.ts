@@ -1,28 +1,15 @@
-import { ContractStatus, ContractType, Message, ProfileType } from "..";
+import { ContractOffer, ContractStatus, ContractType, ProfileType } from "..";
 
-export type getContractsDto = {
+export interface contractOfferDto extends ContractOffer {
   id: string;
-  authorMail: string;
-  authorAvatar: string;
-  authorName: string;
-  isNew: boolean;
-  type: ContractType;
-  title: string;
-  description: string;
-  sport?: string;
-  startDate: Date;
-  endDate?: Date;
-  riderMail: string;
+  sponsorAvatar: string;
+  sponsorName: string;
   riderAvatar?: string;
   riderFullName: string;
-  termsAndConditions?: string;
-  perks?: string[];
-  status: ContractStatus;
-  messages: getMessagesDto[];
-};
+}
 
 export type registerContractDto = {
-  authorMail: string;
+  sponsorMail: string;
   type: ContractType;
   title: string;
   description: string;
