@@ -137,3 +137,9 @@ New Version
 ### Minor Changes
 
 ([#26]) - EDIT - Contract Type
+
+## 1.4.6
+
+### Minor Changes
+
+([#27]) - EDIT - Contract identifer
