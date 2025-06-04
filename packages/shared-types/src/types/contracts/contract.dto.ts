@@ -1,7 +1,7 @@
 import { ContractOffer, ContractStatus, ContractType, ProfileType } from "..";
 
 export interface contractOfferDto extends ContractOffer {
-  id: string;
+  _id: string;
   sponsorAvatar: string;
   sponsorName: string;
   riderAvatar?: string;
