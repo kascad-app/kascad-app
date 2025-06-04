@@ -136,4 +136,4 @@ New Version
 
 ### Minor Changes
 
-([#23]) - EDIT - Contract Type
+([#26]) - EDIT - Contract Type
