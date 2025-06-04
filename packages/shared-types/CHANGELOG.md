@@ -131,3 +131,9 @@ New Version
 ### Minor Changes
 
 ([#23]) - EDIT - Rider Type
+
+## 1.4.5
+
+### Minor Changes
+
+([#23]) - EDIT - Contract Type
