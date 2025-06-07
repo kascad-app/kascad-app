@@ -1,16 +1,4 @@
-import {
-  Availibility,
-  GenderIdentity,
-  Image,
-  NonCompetitionAward,
-  PerformanceSummary,
-  RiderIdentifier,
-  RiderIdentity,
-  RiderPreferences,
-  SponsorSummary,
-  TrainingFrequency,
-  View,
-} from "..";
+import { GenderIdentity, Rider } from "..";
 
 export type registerRiderDto = {
   email: string;
@@ -24,4 +12,22 @@ export type registerRiderDto = {
 export type loginRiderDto = {
   email: string;
   password: string;
+};
+
+export type updateRiderDto = Omit<Rider, "images" | "identifier"> & {
+  identifier: RiderIdentifierDto;
+  images: ImageDto[];
+};
+
+export type RiderIdentifierDto = {
+  phoneNumber?: string;
+  username?: string;
+};
+
+export type ImageDto = {
+  url: string;
+  alt?: string;
+  fileToUpload?: File;
+  isToDelete?: boolean;
+  uploadDate: Date;
 };

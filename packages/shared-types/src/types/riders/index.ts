@@ -115,8 +115,6 @@ export type TrainingFrequency = {
 export type Image = {
   url: string;
   alt?: string;
-  filetoUpload?: File;
-  isToDelete?: boolean;
   uploadDate: Date;
 };
 
