@@ -143,3 +143,9 @@ New Version
 ### Minor Changes
 
 ([#27]) - EDIT - Contract identifer
+
+## 1.4.7
+
+### Minor Changes
+
+([#28]) - Add field to Image Type to update gcp storage
