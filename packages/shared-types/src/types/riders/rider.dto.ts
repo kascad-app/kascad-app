@@ -27,7 +27,6 @@ export type RiderIdentifierDto = {
 export type ImageDto = {
   url: string;
   alt?: string;
-  fileToUpload?: File;
   isToDelete?: boolean;
   uploadDate: Date;
 };
