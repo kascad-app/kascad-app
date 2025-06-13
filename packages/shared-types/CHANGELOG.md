@@ -149,3 +149,9 @@ New Version
 ### Minor Changes
 
 ([#28]) - Add field to Image Type to update gcp storage
+
+## 1.4.8
+
+### Minor Changes
+
+([#28]) - Remove field from Image Dto
