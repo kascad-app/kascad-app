@@ -160,4 +160,4 @@ New Version
 
 ### Minor Changes
 
-([#28]) - Create TempImage type for temporaries Images
+([#30]) - Create TempImage type for temporaries Images
