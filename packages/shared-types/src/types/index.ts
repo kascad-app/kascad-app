@@ -48,3 +48,8 @@ export enum ContractType {
   PRODUCT_PLACEMENT = "Sponsored content contract",
   AFFILIATION = "Affiliate marketing contract",
 }
+
+export type TempImage = {
+  file: File;
+  preview: string;
+};

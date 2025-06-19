@@ -155,3 +155,9 @@ New Version
 ### Minor Changes
 
 ([#28]) - Remove field from Image Dto
+
+## 1.4.9
+
+### Minor Changes
+
+([#28]) - Create TempImage type for temporaries Images
