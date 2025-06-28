@@ -143,3 +143,9 @@ New Version
 ### Minor Changes
 
 ([#27]) - EDIT - Contract identifer
+
+## 1.4.7
+
+### Minor Changes
+
+([#28]) - ADD - Videos to rider
