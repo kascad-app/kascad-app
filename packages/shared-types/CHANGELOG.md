@@ -161,3 +161,9 @@ New Version
 ### Minor Changes
 
 ([#30]) - Create TempImage type for temporaries Images
+
+## 1.4.10
+
+### Minor Changes
+
+([#31]) - Add videos

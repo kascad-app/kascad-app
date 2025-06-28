@@ -19,6 +19,7 @@ export interface Rider extends Profile {
   performanceSummary: PerformanceSummary;
   trainingFrequency: TrainingFrequency;
   sponsorSummary: SponsorSummary;
+  videos: OnlineVideo[];
   images: Image[];
   nonCompetitionAwards: NonCompetitionAward[];
   availibility: Availibility;
@@ -99,12 +100,10 @@ export type Performance = {
   notes?: string;
 };
 
-export type TricksVideo = {
+export type OnlineVideo = {
   url: string;
   title: string;
   description?: string;
-  uploadDate: Date;
-  relatedPerformance?: Performance;
 };
 
 export type TrainingFrequency = {
@@ -134,7 +133,6 @@ export type SponsorSummary = {
 export type PerformanceSummary = {
   totalPodiums: number;
   performances: Performance[];
-  performanceVideos: TricksVideo[];
 };
 
 export type Availibility = {
