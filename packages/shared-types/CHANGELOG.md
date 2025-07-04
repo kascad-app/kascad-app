@@ -167,3 +167,9 @@ New Version
 ### Minor Changes
 
 ([#31]) - Add videos
+
+## 1.5.0
+
+### Major Changes
+
+([#32]) - Refactor types

@@ -74,7 +74,6 @@ export type RiderIdentity = {
   gender: GenderIdentity;
   birthDate: Date;
   country: string;
-  languageSpoken: string[];
   city: string;
   practiceLocation: string;
   bio?: string;
@@ -82,7 +81,7 @@ export type RiderIdentity = {
 
 export type RiderPreferences = {
   sports: Sport[];
-  languages: Language;
+  language: Language;
   networks: SocialNetwork[];
 };
 
@@ -91,12 +90,13 @@ export type Performance = {
   endDate: Date;
   eventName: string;
   category: string;
+  sport: Sport;
   ranking?: number;
   location: {
     country: string;
     city: string;
   };
-  weather: WeatherCondition;
+  weather?: WeatherCondition;
   notes?: string;
 };
 
