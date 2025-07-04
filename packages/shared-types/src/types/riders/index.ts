@@ -74,6 +74,7 @@ export type RiderIdentity = {
   gender: GenderIdentity;
   birthDate: Date;
   country: string;
+  languageSpoken: string[];
   city: string;
   practiceLocation: string;
   bio?: string;
@@ -81,7 +82,7 @@ export type RiderIdentity = {
 
 export type RiderPreferences = {
   sports: Sport[];
-  language: Language;
+  appLanguage: Language;
   networks: SocialNetwork[];
 };
 

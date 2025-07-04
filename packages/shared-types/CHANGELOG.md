@@ -173,3 +173,9 @@ New Version
 ### Major Changes
 
 ([#32]) - Refactor types
+
+## 1.5.1
+
+### Minor Changes
+
+([#33]) - Refactor types
