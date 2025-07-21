@@ -4,15 +4,16 @@ import { ContractType, SportName } from "../..";
 
 export * from "./custom-rider";
 
-enum OfferStatus {
+export enum OfferStatus {
   DRAFT = "draft",
   ACTIVE = "active",
   PAUSED = "paused",
   EXPIRED = "expired",
   CLOSED = "closed",
+  DELETED = "deleted",
 }
 
-enum Currency {
+export enum Currency {
   EUR = "EUR",
   USD = "USD",
   GBP = "GBP",
