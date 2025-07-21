@@ -1,12 +1,13 @@
 {
   "name": "@kascad-app/shared-types",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Shared-types for kascad projects",
   "main": "dist/kascad-app-shared-types.cjs.js",
   "module": "dist/kascad-app-shared-types.esm.js",
   "devDependencies": {
     "typescript": "^5.4.5",
-    "@kascad-app/prettier-config": "workspace:*"
+    "@kascad-app/prettier-config": "workspace:*",
+    "mongoose": "^8.10.0"
   },
   "preconstruct": {
     "entrypoints": [

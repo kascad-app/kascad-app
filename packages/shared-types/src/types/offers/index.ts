@@ -1,0 +1,35 @@
+import { Types } from "mongoose";
+
+import { ContractType, SportName } from "../..";
+
+export * from "./custom-rider";
+
+enum OfferStatus {
+  DRAFT = "draft",
+  ACTIVE = "active",
+  PAUSED = "paused",
+  EXPIRED = "expired",
+  CLOSED = "closed",
+}
+
+enum Currency {
+  EUR = "EUR",
+  USD = "USD",
+  GBP = "GBP",
+}
+
+export interface IOffer {
+  _id: string;
+  createdAt: Date;
+  updatedAt: Date;
+  title: string;
+  description: string;
+  sport: string;
+  contractType: ContractType;
+  sports: SportName[];
+  sponsorId: Types.ObjectId;
+  status: OfferStatus;
+  budgetMin?: number;
+  budgetMax?: number;
+  currency?: Currency;
+}
