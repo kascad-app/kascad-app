@@ -25,7 +25,6 @@ export interface IOffer {
   updatedAt: Date;
   title: string;
   description: string;
-  sport: string;
   contractType: ContractType;
   sports: SportName[];
   sponsorId: Types.ObjectId;
@@ -33,4 +32,18 @@ export interface IOffer {
   budgetMin?: number;
   budgetMax?: number;
   currency?: Currency;
+}
+
+export interface IOffersDashboard {
+  _id: string;
+  title: string;
+  description: string;
+  contractType: ContractType;
+  sports: SportName[];
+  status: OfferStatus;
+  riders: {
+    avatar: string;
+    _id: string;
+  };
+  newApplications: number;
 }
