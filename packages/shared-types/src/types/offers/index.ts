@@ -47,3 +47,22 @@ export interface IOffersDashboard {
   };
   newApplications: number;
 }
+
+export interface IOffersRider {
+  _id: string;
+  title: string;
+  description: string;
+  contractType: ContractType;
+  createdAt: Date;
+  updatedAt: Date;
+  budgetMin?: number;
+  budgetMax?: number;
+  currency?: Currency;
+  sports: SportName[];
+  status: OfferStatus;
+  sponsor: {
+    _id: string;
+    avatarUrl: string | null;
+    companyName: string;
+  };
+}
