@@ -1,81 +1,124 @@
-# Turborepo starter
+# Kascad App
 
-This is an official starter Turborepo.
+A sports sponsorship platform connecting athletes with sponsors across multiple action sports disciplines including cycling, BMX, skateboarding, surfing, snowboarding, and motocross.
 
-## Using this example
+## Overview
 
-Run the following command:
+Kascad is built as a modern monorepo using Turborepo and pnpm workspaces, providing a scalable architecture for managing shared libraries and applications. The platform facilitates partnerships between riders and sponsors through various contract types including UGC, Ambassador, Product Placement, and Affiliation agreements.
 
-```sh
-npx create-turbo@latest
-```
-
-## What's inside?
-
-This Turborepo includes the following packages/apps:
+## Architecture
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- `apps/playground`: Next.js development app for testing and showcasing components
+- `packages/shared-types`: Core TypeScript interfaces and enums defining the platform's domain model
+- `packages/requester`: HTTP client library for API communications
+- `packages/ui-kit`: React component library for consistent UI across applications
+- `packages/eslint-config`: Shared ESLint configurations
+- `packages/prettier-config`: Shared code formatting rules
+- `packages/ts-config`: Shared TypeScript configurations
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+### Tech Stack
 
-### Utilities
+- **Framework**: Next.js 14 with React 18 (App Router)
+- **Language**: TypeScript 5.x with strict configuration
+- **Build System**: Turborepo with pnpm workspaces
+- **Package Building**: Preconstruct for library bundling
+- **Code Quality**: ESLint + Prettier
+- **Package Registry**: GitHub Package Registry
 
-This Turborepo has some additional tools already setup for you:
+## Getting Started
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+### Prerequisites
 
-### Build
+- Node.js >= 18
+- pnpm >= 9.4.0
 
-To build all apps and packages, run the following command:
+### Installation
 
+```bash
+# Clone the repository
+git clone <repository-url>
+cd kascad-app
+
+# Install dependencies
+pnpm install
 ```
-cd my-turborepo
-pnpm build
-```
 
-### Develop
+### Development
 
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
+```bash
+# Start all packages and apps in development mode
 pnpm dev
+
+# Start only the playground app
+cd apps/playground && pnpm dev
+
+# Develop packages with watch mode
+pnpm dev:packages
 ```
 
-### Remote Caching
+### Building
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+```bash
+# Build all packages and apps
+pnpm build
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
+# Build only packages
+pnpm build:packages
 ```
 
-## Useful Links
+### Code Quality
 
-Learn more about the power of Turborepo:
+```bash
+# Lint all code
+pnpm lint
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+# Format all code
+pnpm format
+```
+
+## Domain Model
+
+The platform centers around key entities:
+
+- **Riders**: Athletes across various sports disciplines
+- **Sponsors**: Brands looking to partner with athletes
+- **Contracts**: Partnership agreements with different types and terms
+- **Offers**: Sponsorship opportunities and proposals
+- **Sports**: Cycling, BMX, Skateboarding, Surfing, Snowboarding, Motocross
+- **Social Networks**: Integration with Instagram, TikTok, YouTube, Strava, and more
+
+## Publishing Workflow
+
+The project uses Changesets for version management:
+
+```bash
+# Create a changeset
+pnpm changeset
+
+# Apply version changes
+pnpm version
+
+# Publish packages
+pnpm release
+```
+
+## Package Development
+
+- Packages are built using Preconstruct for optimal bundling
+- Development changes are automatically reflected in consuming applications
+- The `shared-types` package serves as the single source of truth for TypeScript definitions
+- All packages follow consistent configuration patterns
+
+## Contributing
+
+1. Create a feature branch
+2. Make your changes
+3. Run `pnpm lint` and `pnpm format`
+4. Create a changeset if needed: `pnpm changeset`
+5. Submit a pull request
+
+## License
+
+[Add your license information here]
