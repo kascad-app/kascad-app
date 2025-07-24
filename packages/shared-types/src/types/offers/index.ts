@@ -55,6 +55,7 @@ export interface IOffersRider {
   contractType: ContractType;
   createdAt: Date;
   updatedAt: Date;
+  alreadyApplied: boolean;
   budgetMin?: number;
   budgetMax?: number;
   currency?: Currency;
