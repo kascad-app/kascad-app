@@ -4,6 +4,7 @@ export * from "./sponsors";
 export * from "./articles";
 export * from "./contracts";
 export * from "./offers";
+export * from "./conversation";
 
 export type Base = {
   _id: string;
