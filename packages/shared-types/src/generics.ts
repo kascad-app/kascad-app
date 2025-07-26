@@ -57,3 +57,10 @@ export enum WeatherCondition {
   DROUGHT = "drought",
   TROPICAL_STORM = "tropical_storm",
 }
+
+export type PaginationType = {
+  currentPage: number;
+  totalPages: number;
+  totalItems: number;
+  itemsPerPage: number;
+};
